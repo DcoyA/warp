@@ -1,0 +1,14 @@
+version: 0.1
+phases:
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+  build:
+    commands:
+      - echo Building Next.js application...
+      - npm run build:dev
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
